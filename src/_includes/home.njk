@@ -1,0 +1,31 @@
+{% extends "_layout.njk" %}
+
+
+{% block layoutBody %}
+	<div class="container prose prose-zinc prose-sm sm:prose-base mx-auto py-12 sm:py-24 px-12 sm:px-0">
+    <a href="/" class="no-underline">
+      <h1>Roc' Pensieve</h1>
+    </a>
+    <nav class="flex gap-4">
+      {% for navItem in config.nav %}
+        <a href="{{ navItem.url }}">{{navItem.title}}</a>
+      {% endfor %}
+    </nav>
+		{{ content | safe}}
+		<div>
+			<h3>Blog posts</h3>
+			{% for post in collections.posts %}
+				<div>
+					<a href="{{ post.url }}"> {{ post.data.title }} </a>
+				</div>
+			{% endfor %}
+			<h3>Podcasts</h3>
+			{% for podcast in collections.podcasts %}
+				<div>
+					<a href="{{ podcast.url }}">{{ podcast.data.title }}</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

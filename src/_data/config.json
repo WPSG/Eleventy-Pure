@@ -1,0 +1,20 @@
+{
+  "nav": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Tweets",
+      "url": "https://twitter.com/CD2ACBF88"
+    },
+    {
+      "title": "RSS",
+      "url": "/feed.xml"
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    }
+  ]
+}

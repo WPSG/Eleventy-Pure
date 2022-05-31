@@ -1,0 +1,15 @@
+{% extends "_layout.njk" %}
+
+
+{% block layoutBody %}
+  <div class="container mx-auto prose py-12 sm:py-24 px-12 sm:px-0">
+    <div class="mb-12">
+      <a class="no-underline font-bold" href="/">Roc's Pensieve</a>
+    </div>
+    <h1>{{title}}</h1>
+    <div class="italic text-gray-500">{{time}}</div>
+    <div>
+      {{ content | safe}}
+    </div>
+  </div>
+{% endblock %}
